@@ -1,0 +1,62 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Hi there! What can I do for you?",
+        "Hey! Good to see you."
+      ]
+    },
+    {
+  "tag": "doing",
+  "patterns": [
+    "what are you doing",
+    "what's up",
+    "whats up",
+    "wt r u doing",
+    "what are u doing",
+    "what r you doing",
+    "what are you up to"
+  ],
+  "responses": [
+    "I'm here chatting with you!",
+    "I'm helping you with your questions.",
+    "Nothing much! I'm ready to help you."
+  ]
+},
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "I am leaving"
+      ],
+      "responses": [
+        "See you later! Thanks for chatting.",
+        "Have a great day!",
+        "Goodbye!"
+      ]
+    },
+    {
+      "tag": "hours",
+      "patterns": [
+        "When are you open?",
+        "What are your hours?",
+        "Are you open today?"
+      ],
+      "responses": [
+        "We are open daily from 9 AM to 6 PM.",
+        "Our working hours are 9 AM to 6 PM every day."
+      ]
+    }
+  ]
+}
