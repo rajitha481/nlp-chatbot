@@ -10,6 +10,19 @@ from tensorflow.keras.models import load_model
 
 
 # -----------------------------------
+# DOWNLOAD REQUIRED NLTK DATA
+# -----------------------------------
+
+@st.cache_resource
+def download_nltk_data():
+    nltk.download("punkt_tab", quiet=True)
+    nltk.download("wordnet", quiet=True)
+
+
+download_nltk_data()
+
+
+# -----------------------------------
 # PAGE CONFIG
 # -----------------------------------
 
@@ -135,18 +148,16 @@ with st.sidebar:
 
     st.write("### About")
 
-    st.write(
-        """
-        This chatbot uses:
+    st.write("""
+    This chatbot uses:
 
-        • NLP  
-        • NLTK  
-        • Bag of Words  
-        • TensorFlow  
-        • Neural Networks  
-        • Streamlit
-        """
-    )
+    • NLP
+    • NLTK
+    • Bag of Words
+    • TensorFlow
+    • Neural Networks
+    • Streamlit
+    """)
 
     st.divider()
 
@@ -200,7 +211,6 @@ user_input = st.chat_input("Type your message here...")
 
 if user_input:
 
-    # Display user message
     with st.chat_message("user"):
 
         st.write(user_input)
@@ -212,16 +222,12 @@ if user_input:
         }
     )
 
-
-    # Get chatbot response
     with st.spinner("🤖 Thinking..."):
 
         intents_list = predict_class(user_input)
 
         response = get_response(intents_list)
 
-
-    # Display bot response
     with st.chat_message("assistant"):
 
         st.write(response)
