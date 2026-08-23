@@ -4,6 +4,17 @@ import pickle
 import numpy as np
 import tensorflow as tf
 import nltk
+import nltk
+
+try:
+    nltk.data.find("tokenizers/punkt_tab")
+except LookupError:
+    nltk.download("punkt_tab")
+
+try:
+    nltk.data.find("corpora/wordnet")
+except LookupError:
+    nltk.download("wordnet")
 from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
