@@ -189,6 +189,11 @@ Usually at:
 
 http://localhost:8501
 
+## 🚀 Live Demo
+
+Try the chatbot here:
+
+MY_STREAMLIT_LINK_HERE:(https://nlp-chatbot-hhbdw2cwfnqcamfacsuz3z.streamlit.app/)
 
 ## 🔤 NLP Techniques Used
 
