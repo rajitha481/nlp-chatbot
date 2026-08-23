@@ -9,7 +9,7 @@ from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 
 # Load intents.json
-with open(r'Data\intents.json', 'r') as f:
+with open("data/intents.json", "r") as f:
     intents = json.load(f)
 
 words = []
